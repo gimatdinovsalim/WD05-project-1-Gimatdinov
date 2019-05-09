@@ -1,0 +1,31 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Пост в блоге - UI-kit и HTML фреймворк - Документация';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.main-wrapper
+		.container.container--left.user-content.pt-35
+			h1 Пост в блоге
+			
+			.section-ui
+				include ../../sections/block-post.pug
+	
+			pre.
+				include ../../sections/block-post.pug
+				
+			.title sections/block-post.pug
+			pre.
+				.block-post-heading-wrapper
+					.block-post__date 16 марта 2017
+					.block-post__title Национальный парк Йосемити
+				img(src="../img/blog/post-img.jpg").block-post__img
+				.block-post__content
+					p Национальный парк, расположенный в округах Мадера, Марипоса и Туолумне штата Калифорния, США. Каждый год парк посещают 4—5 миллионов человек; большинство останавливается только в долине #[a(href="#!") Йосемите.]...
+					p Парк является одной из крупнейших и нерасчленённых территорий сохранения дикой природы в районе Сьерра-Невады;...
+				.post-nav
+					+button('Предыдущий пост', '#!')
+					+button('Следующий пост', '#!')
+
+				
